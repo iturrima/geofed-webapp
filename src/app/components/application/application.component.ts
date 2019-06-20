@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApplicationsService } from '../../servicios/applications.service';
+import { Compac3dService } from '../../servicios/compac3d.service';
 
 
 @Component({
@@ -14,13 +14,13 @@ export class ApplicationComponent {
 
 
   constructor  ( private activatedRoute: ActivatedRoute,
-                 private _applicationsService: ApplicationsService
+                 private _compac3dService: Compac3dService
 
    ){
 
     this.activatedRoute.params.subscribe( params =>{
       console.log ( params['id'] );
-      this.application = this._applicationsService.getApplication( params['id']);
+      this.application = this._compac3dService.getApplication( params['id']);
       console.log ( this.application );
 
     });

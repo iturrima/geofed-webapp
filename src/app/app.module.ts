@@ -13,7 +13,7 @@ import { ChartsModule } from 'ng2-charts';
 import { APP_ROUTING } from './app.routes';
 
 //Servicios
-import {ApplicationsService } from './servicios/applications.service';
+import {Compac3dService } from './servicios/compac3d.service';
 
 
 
@@ -31,7 +31,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ApplicationsComponent } from './components/applications/applications.component';
+import { Compac3dComponent } from './components/compac3d/compac3d.component';
 import { ApplicationComponent } from './components/application/application.component';
 import { ApplicationTarjetaComponent } from './components/application-tarjeta/application-tarjeta.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
@@ -51,7 +51,7 @@ import { DataComponent } from './components/formularios/data.component';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    ApplicationsComponent,
+    Compac3dComponent,
     ApplicationComponent,
     ApplicationTarjetaComponent,
     BuscadorComponent,
@@ -69,7 +69,7 @@ import { DataComponent } from './components/formularios/data.component';
 
   ],
   providers: [
-    ApplicationsService
+    Compac3dService
   ],
 
   bootstrap: [AppComponent]

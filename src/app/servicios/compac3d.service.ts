@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ApplicationsService {
+export class Compac3dService {
 
-private applications:Application []= [
+private compac3d:Application []= [
     {
       tituloCalculo: "Water Content Calculator",
       detalleCalculo: "This card has supporting text below as a natural lead-in to additional content.",
@@ -56,26 +56,26 @@ private applications:Application []= [
     console.log("servicio listo para usar");
     }
 
-  getApplications():Application[]{
-    return this.applications;
+  getCompac3d():Application[]{
+    return this.compac3d;
   }
 
   getApplication( idx: string ){
-    return this.applications[idx];
+    return this.compac3d[idx];
   }
 
-  buscarApplications( termino:string ){
-    let applicationsArr:Application[]=[];
+  buscarCompac3d( termino:string ){
+    let compac3dArr:Application[]=[];
     termino=termino.toLowerCase();
 
-    for (let application of this.applications){
+    for (let application of this.compac3d){
       let nombre=application.tituloCalculo.toLowerCase();
       if (nombre.indexOf ( termino ) >= 0 ){
-        applicationsArr.push( application )
+        compac3dArr.push( application )
 
       }
     }
-    return applicationsArr;
+    return compac3dArr;
   }
 
 

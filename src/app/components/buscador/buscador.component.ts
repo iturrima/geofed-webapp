@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApplicationsService } from '../../servicios/applications.service';
+import { Compac3dService } from '../../servicios/compac3d.service';
 
 
 @Component({
@@ -10,10 +10,10 @@ import { ApplicationsService } from '../../servicios/applications.service';
 })
 export class BuscadorComponent implements OnInit {
 
-  applications:any[] = [];
+  compac3d:any[] = [];
 
   constructor( private activatedRoute:ActivatedRoute,
-               private _applicationsService:ApplicationsService
+               private _compac3dService:Compac3dService
   ) {
 
 
@@ -25,8 +25,8 @@ export class BuscadorComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe( params =>{
       console.log( params ['termino']);
-      this.applications = this._applicationsService.buscarApplications( params ['termino']);
-      console.log( this.applications );
+      this.compac3d = this._compac3dService.buscarCompac3d( params ['termino']);
+      console.log( this.compac3d );
     })
 
   }
