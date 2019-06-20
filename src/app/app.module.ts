@@ -36,8 +36,6 @@ import { ApplicationComponent } from './components/application/application.compo
 import { ApplicationTarjetaComponent } from './components/application-tarjeta/application-tarjeta.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { LineaComponent } from './components/linea/linea.component';
-import { TemplateComponent } from './components/formularios/template.component';
-import { DataComponent } from './components/formularios/data.component';
 
 
 @NgModule({
@@ -56,8 +54,6 @@ import { DataComponent } from './components/formularios/data.component';
     ApplicationTarjetaComponent,
     BuscadorComponent,
     LineaComponent,
-    TemplateComponent,
-    DataComponent
   ],
   imports: [
     BrowserModule,
