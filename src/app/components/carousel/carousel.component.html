@@ -1,0 +1,53 @@
+<div class="default-banner">
+  <div class="">
+    <div class="animated fadeIn slow">
+      <ngb-carousel *ngIf="images">
+        <div class="container animated fadeIn slow">
+          <div class="row fullscreen justify-content-center align-items-center">
+            <div class="col-md-10 col-12">
+              <ng-template ngbSlide>
+                <img [src]="images[0]" alt="Random first slide" class="animated fadeIn slow">
+                <div class="carousel-caption banner-content text-center">
+                  <!-- <h4 class="text-white mb-20 text-uppercase">GEOTECHNIQUE FOR EARTHWORKS DESIGN</h4> -->
+                  <h1 class="text-uppercase text-white">GEOTECHNIQUE<br>FOR EARTHWORKS DESIGN</h1>
+                  <!-- <p class="text-white">Sede de eventos</p>
+                  <a [routerLink]="['../socios']"  class="text-uppercase header-btn">servicios para mi evento</a> --> -->
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <div class="container animated fadeIn slow">
+          <div class="row fullscreen justify-content-center align-items-center">
+            <div class="col-md-10 col-12">
+              <ng-template ngbSlide>
+                <img [src]="images[1]" alt="Random second slide" class="animated fadeIn slow" style="background-size: cover">
+                <div class="carousel-caption banner-content text-center">
+                  <!-- <h4 class="text-white mb-20 text-uppercase">GEOTECHNIQUE FOR EARTHWORKS DESIGN</h4> -->
+                  <h1 class="text-uppercase text-white">GEOTECHNIQUE<br>FOR EARTHWORKS DESIGN</h1>
+                  <!-- <p class="text-white">Sede de eventos</p>
+                  <a [routerLink]="['../socios']"  class="text-uppercase header-btn">servicios para mi evento</a> --> -->
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <div class="container animated fadeIn slow">
+          <div class="row fullscreen justify-content-center align-items-center">
+            <div class="col-md-10 col-12">
+              <ng-template ngbSlide>
+                <img [src]="images[2]" alt="Random third slide" class="animated fadeIn slow">
+                <div class="carousel-caption banner-content text-center">
+                  <!-- <h4 class="text-white mb-20 text-uppercase">GEOTECHNIQUE FOR EARTHWORKS DESIGN</h4> -->
+                  <h1 class="text-uppercase text-white">GEOTECHNIQUE<br>FOR EARTHWORKS DESIGN</h1>
+                  <!-- <p class="text-white">Sede de eventos</p>
+                  <a [routerLink]="['../socios']"  class="text-uppercase header-btn">servicios para mi evento</a> --> -->
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>       
+      </ngb-carousel>  
+    </div>
+  </div>
+</div>

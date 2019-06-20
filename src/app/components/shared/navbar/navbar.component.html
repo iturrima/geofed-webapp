@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
     <img src="./assets/images/logo.png" height="30" alt="">
   </a>
@@ -26,4 +26,46 @@
       <button (click)="buscarApplication(buscarTexto.value)" class="btn btn-outline-warning my-2 my-sm-0" type="button">Search</button>
     </form>
   </div>
-</nav>
+</nav> -->
+
+
+
+<!-- start banner Area -->
+<section class="banner-area" id="home">
+  <!-- Start Header Area -->
+  <header class="default-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo.png" height="30" alt="">
+        </a>
+        <button class="navbar-toggler hidden-sm-up"  type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item" routerLinkActive>
+              <a class="nav-link" [routerLink]="['home']" (click)="isNavbarCollapsed = !isNavbarCollapsed">Home</a>
+            </li>
+            <li class="nav-item" routerLinkActive>
+              <a class="nav-link" [routerLink]="['about']" (click)="isNavbarCollapsed = !isNavbarCollapsed">About</a>
+            </li>
+            <li class="nav-item" routerLinkActive>
+              <a class="nav-link" [routerLink]="['services']" (click)="isNavbarCollapsed = !isNavbarCollapsed">Services</a>
+            </li>
+            <li class="nav-item" routerLinkActive>
+              <a class="nav-link" [routerLink]="['compac3d']" (click)="isNavbarCollapsed = !isNavbarCollapsed">Compac3d</a>
+            </li>
+            <li class="nav-item" routerLinkActive>
+              <a class="nav-link" [routerLink]="['contact']" (click)="isNavbarCollapsed = !isNavbarCollapsed">Contact</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" (keyup.enter)="buscarApplication(buscarTexto.value)" #buscarTexto>
+              <button (click)="buscarApplication(buscarTexto.value)" class="btn btn-outline-warning my-2 my-sm-0" type="button">Search</button>
+            </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+</section>

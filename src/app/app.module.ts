@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 // Graficos
@@ -36,6 +37,8 @@ import { ApplicationComponent } from './components/application/application.compo
 import { ApplicationTarjetaComponent } from './components/application-tarjeta/application-tarjeta.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { LineaComponent } from './components/linea/linea.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 
 
 @NgModule({
@@ -54,6 +57,9 @@ import { LineaComponent } from './components/linea/linea.component';
     ApplicationTarjetaComponent,
     BuscadorComponent,
     LineaComponent,
+    CarouselComponent,
+    AccordionComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,8 @@ import { LineaComponent } from './components/linea/linea.component';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    APP_ROUTING
+    APP_ROUTING,
+    NgbModule
 
   ],
   providers: [
