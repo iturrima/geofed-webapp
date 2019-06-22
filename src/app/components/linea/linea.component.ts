@@ -203,7 +203,7 @@ Cien:number = 100;
 MP_CM3:number = 62.42796;
 
 //Model Parameters - Imputs Usuario
-
+rrrr: number = this.modelParameters.MP_Gs_C13;
 MP_Gs_C13:number = 2.7;
 MP_Steep_C14:number = 1.8;
 MP_Sopt_C15:number = 77.0;

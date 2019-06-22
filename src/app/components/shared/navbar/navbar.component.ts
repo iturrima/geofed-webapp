@@ -9,6 +9,8 @@ export class NavbarComponent implements OnInit {
 
   constructor( private router:Router ){}
 
+  public isNavbarCollapsed = true;
+
   ngOnInit(){
 
   }
