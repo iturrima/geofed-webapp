@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';   
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -15,6 +16,7 @@ import { APP_ROUTING } from './app.routes';
 
 //Servicios
 import {Compac3dService } from './servicios/compac3d.service';
+import {CompactionService } from './servicios/compaction.service';
 
 
 
@@ -39,6 +41,7 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { LineaComponent } from './components/linea/linea.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+// import { CompactionComponent } from './components/compaction/compaction.component';
 
 
 @NgModule({
@@ -59,6 +62,7 @@ import { AccordionComponent } from './components/accordion/accordion.component';
     LineaComponent,
     CarouselComponent,
     AccordionComponent,
+    // CompactionComponent,
     
   ],
   imports: [
@@ -68,11 +72,13 @@ import { AccordionComponent } from './components/accordion/accordion.component';
     FormsModule,
     ReactiveFormsModule,
     APP_ROUTING,
-    NgbModule
+    NgbModule,
+    HttpClientModule
 
   ],
   providers: [
-    Compac3dService
+    Compac3dService,
+    CompactionService
   ],
 
   bootstrap: [AppComponent]

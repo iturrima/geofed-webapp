@@ -1,7 +1,9 @@
 
 <pre>
-{{  modelParameters | json }}
-{{ modelParameters.MP_Gs_C13 }}
+<h4>Modelo Objeto:</h4> {{  modelParameters | json }}
+<h4>Input MP_Gs_C13:</h4> {{ modelParameters.MP_Gs_C13 }}
+<h4>Grafico MP_Gs_C13:</h4> {{ MP_Gs_C13 }}
+<h4>Forma:</h4> {{ forma.value.MP_Gs_C13 }}
 
 </pre>
 <div class="container">
@@ -9,20 +11,33 @@
   <!-- <app-data></app-data> -->
   <!-- <app-template></app-template> -->
 
-  <h4>Model Parameters <small>|| imput data</small></h4>
+  <h4>Model Parameters <small>|| input data</small></h4>
   <hr>
   <form [formGroup]="forma" (ngSubmit)="guardarCambios()" novalidate="novalidate" > 
 
     <div class="form-group row">
       <label class="col-2 col-form-label">Specific Gravity</label>
+      
+
+      
       <div class="col-md-3">
 
+        <input  class="form-control"
+                type="range"
+                min="2.5"
+                max="3"
+                [value]="MP_Gs_C13"
+                class="slider"
+                formControlName="MP_Gs_C13"
+                [(ngModel)]="modelParameters.MP_Gs_C13"
+                id="myRange">
+              <!-- 
         <input class="form-control"
                type="number"
                [placeholder]="MP_Gs_C13"
                formControlName="MP_Gs_C13"
                [(ngModel)]="modelParameters.MP_Gs_C13"
-               >
+               > -->
       </div>
       <h2>|</h2>
       <label class="col-2 col-form-label">MP_Steep_C14</label>
@@ -169,3 +184,14 @@
       </table>
     </div>
 </div>
+
+<script>
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value; // Display the default slider value
+  
+  // Update the current slider value (each time you drag the slider handle)
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+  </script>

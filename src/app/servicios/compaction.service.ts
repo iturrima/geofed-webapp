@@ -1,59 +1,20 @@
-import { Component, Input } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { Injectable } from '@angular/core';
+// import { CompactionComponent } from '../components/compaction/compaction.component';
 
 
-@Component({
-  selector: 'app-linea',
-  templateUrl: './linea.component.html',
-  styleUrls: ['./linea.component.css']
-}) 
-export class LineaComponent {
+@Injectable({
+  providedIn: 'root'
+})
+export class CompactionService {
 
-    @Input() forma: FormGroup;
+  
+ constructor() { 
 
-  modelParameters:Object = {
-    MP_Gs_C13:'2.7',
-    MP_Steep_C14:'1.8',
-    MP_Sopt_C15:'77.0',
-    MP_Water_B17:'1',
-    MP_WaterRange_C17:'13',
-    MP_Dmax_STD_E13:'125.71915883322',
-    MP_Dmax_MOD_E14:'134.142901457967',
-    MP_Sm_E15:'98.0',
-    MP_Dfield_E17:'5',
-    MP_E90_G13:'30000'
+  console.log("servicio listo para usar");
+
   }
 
-  constructor(){
-
-
-    console.log( this.modelParameters );
-
-    this.forma = new FormGroup ({
-
-          'MP_Gs_C13' : new FormControl         ('',  Validators.required),
-          'MP_Steep_C14' : new FormControl      ('',  Validators.required),
-          'MP_Sopt_C15' : new FormControl       ('',  Validators.required),
-          'MP_Water_B17' : new FormControl      ('',  Validators.required),
-          'MP_WaterRange_C17' : new FormControl  ('',  Validators.required),
-          'MP_Dmax_STD_E13' : new FormControl   ('',  Validators.required),
-          'MP_Dmax_MOD_E14' : new FormControl   ('',  Validators.required),
-          'MP_Sm_E15' : new FormControl         ('',  Validators.required),
-          'MP_Dfield_E17' : new FormControl     ('',  Validators.required),
-          'MP_E90_G13' : new FormControl        ('',  Validators.required)
-    })
-
-
-    }
-
-  guardarCambios(){
-
-    console.log(this.forma.value.MP_Gs_C13);
-    // console.log(this.forma);
-    // let MP_Gs_C13:number = this.forma.value['MP_Gs_C13'];
-  }
-
-
+    
 // W
 W_1_A69:number = 1;
 W_2_A70:number = 1.3;
@@ -132,16 +93,16 @@ Cien:number = 100;
 MP_CM3:number = 62.42796;
 
 //Model Parameters - Imputs Usuario
-MP_Gs_C13:number = this.modelParameters['MP_Gs_C13'];
-MP_Steep_C14:number = this.modelParameters['MP_Steep_C14'];
-MP_Sopt_C15:number = this.modelParameters['MP_Sopt_C15'];
-MP_Water_B17:number = this.modelParameters['MP_Water_B17'];
-MP_WaterRange_C17:number = this.modelParameters['MP_WaterRange_C17'];
-MP_Dmax_STD_E13:number = this.modelParameters['MP_Dmax_STD_E13'];
-MP_Dmax_MOD_E14:number = this.modelParameters['MP_Dmax_MOD_E14'];
-MP_Sm_E15:number = this.modelParameters['MP_Sm_E15'];
-MP_Dfield_E17:number = this.modelParameters['MP_Dfield_E17'];
-MP_E90_G13:number = this.modelParameters['MP_E90_G13'];
+MP_Gs_C13:number = 2.7;
+MP_Steep_C14:number = 1.8;
+MP_Sopt_C15:number = 77.0;
+MP_Water_B17:number = 1;
+MP_WaterRange_C17:number = 13;
+MP_Dmax_STD_E13:number = 125.71915883322;
+MP_Dmax_MOD_E14:number = 134.142901457967;
+MP_Sm_E15:number = 98.0;
+MP_Dfield_E17:number = 5;
+MP_E90_G13:number = 30000;
 
 //Project Data - Imputs Usuario
 
@@ -772,6 +733,4 @@ PD_Dfield_G21:number = 125;
  }
 
 
-
-
- }
+}
