@@ -711,50 +711,50 @@ PD_Dfield_G21:number = 125;
      { // A
        backgroundColor: 'rgba(194,0,255,0)',
        borderColor: 'rgba(194,0,255,1)',
-       pointBackgroundColor: 'rgba(235,170,255,1)',
+       pointBackgroundColor: '#C200FF',
        pointBorderColor: '#C200FF',
        pointHoverBackgroundColor: '#C200FF',
-       pointHoverBorderColor: 'rgba(194,0,255,0.8)'
+       pointHoverBorderColor: '#C200FF'
      },
      { // B
        backgroundColor: 'rgba(102,0,255,0)',
-       borderColor: 'rgba(102,0,255,0.1)',
-       pointBackgroundColor: 'rgba(102,204,255,1)',
+       borderColor: 'rgba(102,0,255,1)',
+       pointBackgroundColor: '#6600FF',
        pointBorderColor: '#6600FF',
-       pointHoverBackgroundColor: '#6600FF',
-       pointHoverBorderColor: 'rgba(102,0,255,0.8)'
+       pointHoverBackgroundColor:  '#6600FF',
+       pointHoverBorderColor:  '#6600FF'
      },
      { // C
        backgroundColor: 'rgba(255,204,0,0)',
        borderColor: 'rgba(255,153,0,1)',
-       pointBackgroundColor: 'rgba(255,255,0,1)',
+       pointBackgroundColor:  '#FF9900',
        pointBorderColor: '#FF9900',
        pointHoverBackgroundColor: '#FF9900',
-       pointHoverBorderColor: 'rgba(255,153,0,0.8)'
+       pointHoverBorderColor:  '#FF9900'
      },
      { // D
       backgroundColor: 'rgba(0,128,0,0)',
       borderColor: 'rgba(0,153,0,1)',
-      pointBackgroundColor: 'rgba(0,255,0,1)',
+      pointBackgroundColor: '#009900',
       pointBorderColor: '#009900',
       pointHoverBackgroundColor: '#009900',
-      pointHoverBorderColor: 'rgba(0,153,0,0.8)'
+      pointHoverBorderColor:  '#009900'
     },
      { // E
        backgroundColor: 'rgba(255,69,0,0)',
        borderColor: 'rgba(255,69,0,1)',
-       pointBackgroundColor: 'rgba(255,204,204,1)',
+       pointBackgroundColor: '#FF0000',
        pointBorderColor: '#FF0000',
        pointHoverBackgroundColor: '#FF0000',
-       pointHoverBorderColor: 'rgba(255,69,0,0.8)'
+       pointHoverBorderColor: '#FF0000'
      },
      { // F
        backgroundColor: 'rgba(96,96,96,0)',
-       borderColor: 'rgba(96,96,96,0.1)',
-       pointBackgroundColor: 'rgba(220,220,220,1)',
+       borderColor: 'rgba(96,96,96,1)',
+       pointBackgroundColor:'#606060',
        pointBorderColor: '#606060',
        pointHoverBackgroundColor: '#606060',
-       pointHoverBorderColor: 'rgba(96,96,96,0.8)'
+       pointHoverBorderColor: '#606060'
      },
    ];
 
