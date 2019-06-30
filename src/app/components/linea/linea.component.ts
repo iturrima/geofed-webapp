@@ -15,7 +15,7 @@ export class LineaComponent {
     @Input() forma: FormGroup;
 
   modelParameters:Object = {
-    MP_Gs_C13:'5',
+    MP_Gs_C13:'2.7',
     MP_Steep_C14:'1.8',
     MP_Sopt_C15:'77.0',
     MP_Water_B17:'1',
