@@ -2,17 +2,20 @@ import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 
+
 @Component({
   selector: 'app-linea',
   templateUrl: './linea.component.html',
   styleUrls: ['./linea.component.css']
 }) 
+
+
 export class LineaComponent {
 
     @Input() forma: FormGroup;
 
   modelParameters:Object = {
-    MP_Gs_C13:'2.7',
+    MP_Gs_C13:'5',
     MP_Steep_C14:'1.8',
     MP_Sopt_C15:'77.0',
     MP_Water_B17:'1',
@@ -23,6 +26,17 @@ export class LineaComponent {
     MP_Dfield_E17:'5',
     MP_E90_G13:'30000'
   }
+
+    // MP_Gs_C13:number;
+    // MP_Steep_C14:number;
+    // MP_Sopt_C15:number;
+    // MP_Water_B17:number;
+    // MP_WaterRange_C17:number;
+    // MP_Dmax_STD_E13:number;
+    // MP_Dmax_MOD_E14:number;
+    // MP_Sm_E15:number;
+    // MP_Dfield_E17:number;
+    // MP_E90_G13:number;
 
   constructor(){
 
@@ -41,7 +55,22 @@ export class LineaComponent {
           'MP_Sm_E15' : new FormControl         ('',  Validators.required),
           'MP_Dfield_E17' : new FormControl     ('',  Validators.required),
           'MP_E90_G13' : new FormControl        ('',  Validators.required)
+
+
     })
+
+
+//Model Parameters - Imputs Usuario
+let MP_Gs_C13:number = this.modelParameters['MP_Gs_C13'];
+let MP_Steep_C14:number = this.modelParameters['MP_Steep_C14'];
+let MP_Sopt_C15:number = this.modelParameters['MP_Sopt_C15'];
+let MP_Water_B17:number = this.modelParameters['MP_Water_B17'];
+let MP_WaterRange_C17:number = this.modelParameters['MP_WaterRange_C17'];
+let MP_Dmax_STD_E13:number = this.modelParameters['MP_Dmax_STD_E13'];
+let MP_Dmax_MOD_E14:number = this.modelParameters['MP_Dmax_MOD_E14'];
+let MP_Sm_E15:number = this.modelParameters['MP_Sm_E15'];
+let MP_Dfield_E17:number = this.modelParameters['MP_Dfield_E17'];
+let MP_E90_G13:number = this.modelParameters['MP_E90_G13'];
 
 
     }
@@ -51,6 +80,19 @@ export class LineaComponent {
     console.log(this.forma.value.MP_Gs_C13);
     // console.log(this.forma);
     // let MP_Gs_C13:number = this.forma.value['MP_Gs_C13'];
+
+//Model Parameters - Imputs Usuario
+MP_Gs_C13 : this.modelParameters['MP_Gs_C13'];
+MP_Steep_C14: this.modelParameters['MP_Steep_C14'];
+MP_Sopt_C15: this.modelParameters['MP_Sopt_C15'];
+MP_Water_B17:this.modelParameters['MP_Water_B17'];
+MP_WaterRange_C17:this.modelParameters['MP_WaterRange_C17'];
+MP_Dmax_STD_E13: this.modelParameters['MP_Dmax_STD_E13'];
+MP_Dmax_MOD_E14: this.modelParameters['MP_Dmax_MOD_E14'];
+MP_Sm_E15: this.modelParameters['MP_Sm_E15'];
+MP_Dfield_E17: this.modelParameters['MP_Dfield_E17'];
+MP_E90_G13: this.modelParameters['MP_E90_G13'];
+
   }
 
 
@@ -149,8 +191,8 @@ PD_Wfield_G20:number = 9.5;
 PD_Dfield_G21:number = 125;
 
 //Model Parameters - Resultados
- MP_Wopt_STDG14 = (this.MP_Sopt_C15*this.MP_Gs_C13*this.MP_CM3-this.MP_Sopt_C15*this.MP_Dmax_STD_E13)/(this.MP_Gs_C13*this.MP_Dmax_STD_E13);
- MP_Wopt_MOD_G15 = (this.MP_Sopt_C15*this.MP_Gs_C13*this.MP_CM3-this.MP_Sopt_C15*this.MP_Dmax_MOD_E14)/(this.MP_Gs_C13*this.MP_Dmax_MOD_E14);
+ MP_Wopt_STDG14 = (this.modelParameters['MP_Sopt_C15']*this.modelParameters['MP_Gs_C13']*this.MP_CM3-this.modelParameters['MP_Sopt_C15']*this.modelParameters['MP_Dmax_STD_E13'])/(this.modelParameters['MP_Gs_C13']*this.modelParameters['MP_Dmax_STD_E13']);
+ MP_Wopt_MOD_G15 = (this.modelParameters['MP_Sopt_C15']*this.modelParameters['MP_Gs_C13']*this.MP_CM3-this.modelParameters['MP_Sopt_C15']*this.modelParameters['MP_Dmax_MOD_E14'])/(this.modelParameters['MP_Gs_C13']*this.modelParameters['MP_Dmax_MOD_E14']);
  MP_R2_G17 = this.Var_R2_B60;
 
 // Grilla de Celdas
@@ -647,9 +689,11 @@ PD_Dfield_G21:number = 125;
 
 
 
+
+  
   // lineChart
    public lineChartData:Array<any> = [
-     {data: [this.A1,this.A2], label: 'Field Target'},
+    //  {data: [this.A1,this.A2], label: 'Field Target'},
      {data: [this.B1,this.B2,this.B3,this.B4,this.B5,this.B6,this.B7,this.B8,this.B9,this.B10,this.B11,this.B12,this.B13,this.B14,this.B15,this.B16,this.B17,this.B18,this.B19,this.B20,this.B21,this.B22,this.B23,this.B24,this.B25,this.B26,this.B27,this.B28,this.B29,this.B30,this.B31,this.B32,this.B33,this.B34,this.B35,this.B36,this.B37,this.B38,this.B39,this.B40,this.B41], label: 'Zero Air Voids'},
      {data: [this.C1,this.C2,this.C3,this.C4,this.C5,this.C6,this.C7,this.C8,this.C9,this.C10,this.C11,this.C12,this.C13,this.C14,this.C15,this.C16,this.C17,this.C18,this.C19,this.C20,this.C21,this.C22,this.C23,this.C24,this.C25,this.C26,this.C27,this.C28,this.C29,this.C30,this.C31,this.C32,this.C33,this.C34,this.C35,this.C36,this.C37,this.C38,this.C39,this.C40,this.C41], label: 'Modifed'},
      {data: [this.D1,this.D2,this.D3,this.D4,this.D5,this.D6,this.D7,this.D8,this.D9,this.D10,this.D11,this.D12,this.D13,this.D14,this.D15,this.D16,this.D17,this.D18,this.D19,this.D20,this.D21,this.D22,this.D23,this.D24,this.D25,this.D26,this.D27,this.D28,this.D29,this.D30,this.D31,this.D32,this.D33,this.D34,this.D35,this.D36,this.D37,this.D38,this.D39,this.D40,this.D41], label: 'Standard'},
@@ -708,51 +752,51 @@ PD_Dfield_G21:number = 125;
      };
 
    public lineChartColors:Array<any> = [
-     { // A
-       backgroundColor: 'rgba(194,0,255,0)',
-       borderColor: 'rgba(194,0,255,1)',
-       pointBackgroundColor: '#C200FF',
-       pointBorderColor: '#C200FF',
-       pointHoverBackgroundColor: '#C200FF',
-       pointHoverBorderColor: '#C200FF'
-     },
+    //  { // A
+    //    backgroundColor: 'rgba(194,0,255,0)',
+    //    borderColor: 'rgba(194,0,255,1)',
+    //   //  pointBackgroundColor: '#C200FF',
+    //   //  pointBorderColor: '#C200FF',
+    //    pointHoverBackgroundColor: '#200FF',
+    //    pointHoverBorderColor: '#C200FF'
+    //  },
      { // B
        backgroundColor: 'rgba(102,0,255,0)',
        borderColor: 'rgba(102,0,255,1)',
-       pointBackgroundColor: '#6600FF',
-       pointBorderColor: '#6600FF',
+      //  pointBackgroundColor: '#6600FF',
+      //  pointBorderColor: '#6600FF',
        pointHoverBackgroundColor:  '#6600FF',
        pointHoverBorderColor:  '#6600FF'
      },
      { // C
        backgroundColor: 'rgba(255,204,0,0)',
        borderColor: 'rgba(255,153,0,1)',
-       pointBackgroundColor:  '#FF9900',
-       pointBorderColor: '#FF9900',
+      //  pointBackgroundColor:  '#FF9900',
+      //  pointBorderColor: '#FF9900',
        pointHoverBackgroundColor: '#FF9900',
        pointHoverBorderColor:  '#FF9900'
      },
      { // D
       backgroundColor: 'rgba(0,128,0,0)',
       borderColor: 'rgba(0,153,0,1)',
-      pointBackgroundColor: '#009900',
-      pointBorderColor: '#009900',
+      // pointBackgroundColor: '#009900',
+      // pointBorderColor: '#009900',
       pointHoverBackgroundColor: '#009900',
       pointHoverBorderColor:  '#009900'
     },
      { // E
        backgroundColor: 'rgba(255,69,0,0)',
        borderColor: 'rgba(255,69,0,1)',
-       pointBackgroundColor: '#FF0000',
-       pointBorderColor: '#FF0000',
+      //  pointBackgroundColor: '#FF0000',
+      //  pointBorderColor: '#FF0000',
        pointHoverBackgroundColor: '#FF0000',
        pointHoverBorderColor: '#FF0000'
      },
      { // F
        backgroundColor: 'rgba(96,96,96,0)',
        borderColor: 'rgba(96,96,96,1)',
-       pointBackgroundColor:'#606060',
-       pointBorderColor: '#606060',
+      //  pointBackgroundColor:'#606060',
+      //  pointBorderColor: '#606060',
        pointHoverBackgroundColor: '#606060',
        pointHoverBorderColor: '#606060'
      },

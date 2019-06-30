@@ -16,7 +16,7 @@ import { APP_ROUTING } from './app.routes';
 
 //Servicios
 import {Compac3dService } from './servicios/compac3d.service';
-import {CompactionService } from './servicios/compaction.service';
+// import {CompactionService } from './servicios/compaction.service';
 
 
 
@@ -78,7 +78,7 @@ import { AccordionComponent } from './components/accordion/accordion.component';
   ],
   providers: [
     Compac3dService,
-    CompactionService
+    // CompactionService
   ],
 
   bootstrap: [AppComponent]
