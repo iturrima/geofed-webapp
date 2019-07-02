@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 
 
@@ -10,8 +11,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 }) 
 
 
+
 export class LineaComponent {
 
+  
     @Input() forma: FormGroup;
 
   modelParameters:Object = {
